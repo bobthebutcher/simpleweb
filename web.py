@@ -16,7 +16,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.wfile.write("<body><p>This ATP testing.</p>")
         #self.wfile.write("<p>Your headers: %s</p>" % self.headers)
         self.wfile.write("<p>Your headers: %s" % self.headers)
-        self.wfile.write("<p>Your headers: %s" % self.client_address)
+        self.wfile.write("<p>Source address: %s" % self.client_address[0])
         self.wfile.write("</body></html>")
         
 def main():
